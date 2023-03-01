@@ -67,7 +67,6 @@ const CreateProduct = () => {
           <label htmlFor="productType" id='productType'>
             type switcher
             <select name="type" id="productType" required value={opt} onChange={handleType}>
-              <option value={''} disabled>type Switcher..</option>
               <option value="DVD" id='DVD'>DVD</option>
               <option value="Furniture" id="Furniture">furniture</option>
               <option value="Book" id='Book'>Book</option>
