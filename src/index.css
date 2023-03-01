@@ -121,4 +121,6 @@ label span {
 .typeModel {
   height: 200px;
 }
-
+.please {
+  width: max-content;
+}

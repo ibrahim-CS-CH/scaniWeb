@@ -4,8 +4,9 @@ const Dvd = (props) => {
   return (
     <div className=''>
         <label htmlFor="size">
-            Size (MB)
+            <span> Size (MB)</span> 
             <input type="text" name="size" id="size" onChange={props.handleChange}  placeholder="Please, provide size" required />
+            <p className='please'>Please, provide size in (MB)</p>
         </label>
     </div>
   )

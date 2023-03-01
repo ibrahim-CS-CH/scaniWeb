@@ -65,10 +65,10 @@ const CreateProduct = () => {
             <input type="text"name="price" id='price' min={1} onChange={handleChange} placeholder="Please, provide price" required />
           </label>
           <label htmlFor="productType" id='productType'>
-            type switcher
+            productType
             <select name="type" id="productType" required value={opt} onChange={handleType}>
               <option value="DVD" id='DVD'>DVD</option>
-              <option value="Furniture" id="Furniture">furniture</option>
+              <option value="Furniture" id="Furniture">Furniture</option>
               <option value="Book" id='Book'>Book</option>
             </select>
           </label>
