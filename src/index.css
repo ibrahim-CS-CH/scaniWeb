@@ -1,0 +1,124 @@
+#nav {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+}
+ul {
+  list-style: none;
+  padding: 10px 50px;
+}
+a {
+  text-decoration: none;
+  color: black;
+  padding: 4px 12px;
+}
+#productList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#delete-btn {
+  text-transform: uppercase;
+  padding: 4px 12px;
+  background: none;
+  border: solid black 1px;
+  border-radius: 4px;
+}
+#delete-btn:hover , .save:hover, .cancel:hover {
+  cursor: pointer;
+}
+#productList , .create{
+  border-bottom: solid black 2px;
+}
+#delete-add-container{
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  border-radius: 4px;
+}
+.save-cancel-container {
+  display: flex;
+  justify-content: space-between;
+  width: 150px  ;
+}
+.save:hover, #add-btn:hover {
+  background-color: green;
+  color: white;
+}
+.cancel:hover, #delete-btn:hover  {
+  background-color: red;
+  color: white;
+}
+#add-btn {
+  border: solid black 1px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+h1 {
+  text-transform: capitalize;
+}
+.save, .cancel {
+  text-transform: capitalize;
+  padding: 4px 12px;
+  width: 10;
+  background-color: white;
+  border: solid black 2px;
+  border-radius: 4px;
+}
+.create {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  gap: 45px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  width: unset;
+}
+.cart {
+  border: 1px solid black;
+  text-align: center;
+  width: 200px;
+  text-transform: capitalize;
+  padding: 15px;
+  margin: 0 auto;
+}
+.delete-checkbox {
+  display: block;
+}
+#productForm {
+  width: 25%;
+}
+label {
+  display: block;
+  width:75%;
+  display: grid;
+  grid-template-columns: repeat(2, 0.5fr);
+  margin: 15px;
+  text-transform: capitalize;
+  align-items: center;
+  justify-content: space-between;
+}
+label .sku {
+  text-transform: uppercase;
+}
+label input {
+  padding: 8px 3px;
+}
+label select {
+  padding: 8px 3px;
+}
+label span {
+  width: fit-content;
+}
+#productType {
+  text-transform: capitalize;
+}
+.typeModel {
+  height: 200px;
+}
+
