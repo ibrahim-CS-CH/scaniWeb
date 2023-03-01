@@ -62,7 +62,7 @@ const CreateProduct = () => {
           </label>
           <label htmlFor="price">
             price ($)
-            <input type="number"name="price" id='price' min={1} onChange={handleChange} placeholder="Please, provide price" required />
+            <input type="text"name="price" id='price' min={1} onChange={handleChange} placeholder="Please, provide price" required />
           </label>
           <label htmlFor="productType" id='productType'>
             type switcher
