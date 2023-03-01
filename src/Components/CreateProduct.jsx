@@ -44,7 +44,7 @@ const CreateProduct = () => {
   }
   return (
     <div>
-      <form onSubmit={handleSave} id="product_form">
+      <form onSubmit={handleSave} id="#product_form">
         <div className='create'>
           <h1 >product add</h1>
           <div className='save-cancel-container'>
@@ -69,9 +69,9 @@ const CreateProduct = () => {
             type switcher
             <select name="type" id="productType" required value={opt} onChange={handleType}>
               <option value={''} disabled>type Switcher..</option>
-              <option value="dvd" id='DVD'>dvd</option>
+              <option value="dvd" id='DVD'>DVD</option>
               <option value="furniture" id="Furniture">furniture</option>
-              <option value="weight" id='Book'>weight</option>
+              <option value="weight" id='Book'>Book</option>
             </select>
           </label>
           <div className='typeModel'>

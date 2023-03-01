@@ -7,7 +7,6 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <SharedLayout />
         <Routes>
           <Route path='/' element={<ListProducts />}/>
           <Route path='/addproduct' element={<CreateProduct />}/>
