@@ -4,7 +4,7 @@ const Dvd = (props) => {
   return (
     <div className=''>
         <label htmlFor="size">
-            size (MB)
+            DVD (MB)
             <input type="text" name="size" id="size" onChange={props.handleChange}  placeholder="Please, provide size" required />
         </label>
     </div>
