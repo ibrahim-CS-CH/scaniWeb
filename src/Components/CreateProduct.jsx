@@ -19,9 +19,8 @@ const CreateProduct = () => {
   }
   const handleSave = (e) =>{
     e.preventDefault();
-    axios.post('https://scaniwebtask.000webhostapp.com/index.php', inputs).then((res)=>{
-      if(res.data.status == 1){
-
+    axios.post('https://scaniwebtask.000webhostapp.com/index.php', x).then((res)=>{
+      if(res.data.status ){
         console.log(res.data);
         navigate('/');
       }else {
@@ -30,7 +29,6 @@ const CreateProduct = () => {
           title: 'Oops...',
           text: res.data.message,
           timer: 3000
-
         })
         console.log(res.data.message);
       }
@@ -40,11 +38,12 @@ const CreateProduct = () => {
   const handleChange = (e)=>{
     const name = e.target.name;
     const value = e.target.value;
-    setInputs((e)=> ({...e, [name]:value}))
+    setInputs((e)=> ({...e, [name] :value}))
   }
+  const  x= JSON.stringify(inputs);
   return (
     <div>
-      <form onSubmit={handleSave} id="product_form">
+      <form onSubmit={handleSave} id="product_form" method='POST'>
         <div className='create'>
           <h1 >product add</h1>
           <div className='save-cancel-container'>
