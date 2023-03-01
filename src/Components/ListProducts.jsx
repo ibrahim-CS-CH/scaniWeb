@@ -36,9 +36,9 @@ const ListProducts = () => {
         <h1>product list</h1>
         <div id="delete-add-container">
           <Link to={"/addproduct"} id="add-btn">
-            ADD
+            add
           </Link>
-          <button id="delete-btn" onClick={handleDelete}>MASS DELETE</button>
+          <button id="delete-btn" onClick={handleDelete}>mass delete</button>
         </div>
       </div>
       <div className="products">
