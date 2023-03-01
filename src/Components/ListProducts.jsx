@@ -6,7 +6,7 @@ const ListProducts = () => {
   const [checked, setChecked] = useState([]);
   const handleDelete = (e)=>{
     e.preventDefault();
-    axios.post('http://127.0.0.1/index2.php', checked).then((res)=>{
+    axios.post('https://scaniwebtask.000webhostapp.com/inde.php', checked).then((res)=>{
     console.log(res.data);
     fetchData();
     })

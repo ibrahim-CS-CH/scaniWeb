@@ -19,7 +19,7 @@ const CreateProduct = () => {
   }
   const handleSave = (e) =>{
     e.preventDefault();
-    axios.post('http://127.0.0.1/index.php', inputs).then((res)=>{
+    axios.post('https://scaniwebtask.000webhostapp.com/index.php', inputs).then((res)=>{
       if(res.data.status == 1){
 
         console.log(res.data);
