@@ -23,7 +23,7 @@ const ListProducts = () => {
     fetchData()
   }, [])
   const fetchData = ()=>{
-    axios.get('http://127.0.0.1/index.php').then((res)=>{
+    axios.get('https://scaniwebtask.000webhostapp.com/index.php').then((res)=>{
       setProducts(res.data);
     })
   }

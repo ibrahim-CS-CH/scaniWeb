@@ -1,5 +1,4 @@
 <?php
-
 class DB {
     public $con;
     public function __construct($database_type,$host, $database_name, $username, $password)
