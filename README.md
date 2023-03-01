@@ -1,8 +1,8 @@
 # ScandiWeb Task
 ## To run You Need to write these command after clone
 
-yarn 
-yarn dev
+-yarn 
+-yarn dev
 
 ## secondly please make file that contains php code read from ReactJS Part check DataBase( name, host, passwd);
 make sure that your data base like this (sku, name, price, size, width,length, height, weight) sku will be unique and primeary key other var will nullable it's okay don't worry about this.
