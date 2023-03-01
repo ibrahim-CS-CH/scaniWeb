@@ -67,20 +67,20 @@ const CreateProduct = () => {
           <label htmlFor="productType" id='productType'>
             productType
             <select name="type" id="productType" required value={opt} onChange={handleType}>
-              <option disabled>choose type</option>
+              <option value={""}>choose type</option>
               <option value="DVD" id='DVD'>DVD</option>
               <option value="Furniture" id="Furniture">Furniture</option>
               <option value="Book" id='Book'>Book</option>
             </select>
           </label>
           <div className='typeModel'>
-            {opt == 'DVD' && (
+            {opt === 'DVD' && (
               <Dvd handleChange={handleChange}/>
             )}
-            {opt == 'Furniture' && (
+            {opt === 'Furniture' && (
               <Furniture handleChange={handleChange} />
             )}
-            {opt == 'Book' && (
+            {opt === 'Book' && (
               <Book  handleChange={handleChange} />
             )}
           </div>  
