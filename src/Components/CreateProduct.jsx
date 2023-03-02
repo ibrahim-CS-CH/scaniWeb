@@ -37,36 +37,43 @@ const CreateProduct = () => {
   }
   const handleSave = (e) =>{
     e.preventDefault();
-    console.log(inputs);
-    switch(opt) {
-      case 'DVD':
-        if(numberValidation(inputs.size) == false) {
-          alert('please Enter a valid number in size');
-        }else {
-          sendReq();
+    if(!/^[a-zA-Z\s]*$/g.test(inputs.name)){
+      alert("please Enter a valid name like 'shoses and clothes'")
+    }else {
+      if(numberValidation(inputs.price) == false) {
+        alert('please Enter a valid number in price');
+      }else {
+        switch(opt) {
+          case 'DVD':
+            if(numberValidation(inputs.size) == false) {
+              alert('please Enter a valid number in size');
+            }else {
+              sendReq();
+            }
+            break;
+            case "Furniture":
+              if (numberValidation(inputs.height) ==false) {
+                alert('please enter an integar number in height');
+              }
+              else if (numberValidation(inputs.width) ==false) {
+                alert('please enter an integar number in width');
+              }
+              else if (numberValidation(inputs.length) ==false) {
+                alert('please enter an integar number in length');
+              }else {
+                sendReq();
+              }
+              break;
+              case 'Book':
+              if(numberValidation(inputs.weight) == false) {
+                alert('please Enter a valid number in weight');
+              }else {
+                sendReq();
+              }
+            break;
+    
         }
-        break;
-        case "Furniture":
-          if (numberValidation(inputs.height) ==false) {
-            alert('please enter an integar number in height');
-          }
-          else if (numberValidation(inputs.width) ==false) {
-            alert('please enter an integar number in width');
-          }
-          else if (numberValidation(inputs.length) ==false) {
-            alert('please enter an integar number in length');
-          }else {
-            sendReq();
-          }
-          break;
-          case 'Book':
-          if(numberValidation(inputs.weight) == false) {
-            alert('please Enter a valid number in weight');
-          }else {
-            sendReq();
-          }
-        break;
-
+      }
     }
   
     
