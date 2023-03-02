@@ -2,11 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import CreateProduct from './Components/CreateProduct'
 import Error from './Components/Error'
 import ListProducts from './Components/ListProducts'
-
-
-
-
-
 function App() {
   return (
     <div>

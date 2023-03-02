@@ -47,7 +47,7 @@ const CreateProduct = () => {
         <div className='create'>
           <h1 >product add</h1>
           <div className='save-cancel-container'>
-            <button className='save'>save</button>
+            <button className='save'>Save</button>
             <Link className='cancel' to={'/'}>cancel</Link>
           </div>
         </div>
@@ -67,7 +67,7 @@ const CreateProduct = () => {
           <label htmlFor="productType" id='productType'>
             productType
             <select name="type" id="productType" required value={opt} onChange={handleType}>
-              <option value={""}>choose type</option>
+              <option>choose type</option>
               <option value="DVD" id='DVD'>DVD</option>
               <option value="Furniture" id="Furniture">Furniture</option>
               <option value="Book" id='Book'>Book</option>

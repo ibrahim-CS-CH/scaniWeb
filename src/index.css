@@ -18,7 +18,6 @@ a {
   justify-content: space-between;
 }
 #delete-btn {
-  text-transform: uppercase;
   padding: 4px 12px;
   background: none;
   border: solid black 1px;
@@ -52,13 +51,9 @@ a {
 #add-btn {
   border: solid black 1px;
   border-radius: 4px;
-  text-transform: uppercase;
 }
-h1 {
-  text-transform: capitalize;
-}
+
 .save, .cancel {
-  text-transform: capitalize;
   padding: 4px 12px;
   width: 10;
   background-color: white;
@@ -83,7 +78,6 @@ h1 {
   border: 1px solid black;
   text-align: center;
   width: 200px;
-  text-transform: capitalize;
   padding: 15px;
   margin: 0 auto;
 }
@@ -99,13 +93,10 @@ label {
   display: grid;
   grid-template-columns: repeat(2, 0.5fr);
   margin: 15px;
-  text-transform: capitalize;
   align-items: center;
   justify-content: space-between;
 }
-label .sku {
-  text-transform: uppercase;
-}
+
 label input {
   padding: 8px 3px;
 }
@@ -115,9 +106,7 @@ label select {
 label span {
   width: fit-content;
 }
-#productType {
-  text-transform: capitalize;
-}
+
 .typeModel {
   height: 200px;
 }
