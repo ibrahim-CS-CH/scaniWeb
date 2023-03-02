@@ -6,13 +6,8 @@ const ListProducts = () => {
   const [products, setProducts] = useState([]);
   const [checked, setChecked] = useState([]);
   const handleDelete = (e)=>{
-    e.preventDefault();
-
-
-     
-    console.log( x);
-    
-    if (checked.length >0 ){
+    e.preventDefault();    
+    if (checked.length > 0 ){
       axios.post('https://scaniwebtask.000webhostapp.com/inde.php', JSON.stringify(checked)).then((res)=>{
       if (res.data.status == 1 ) {
         console.log("deleted");
@@ -27,12 +22,11 @@ const ListProducts = () => {
   }
   const handleChange = (e)=> {
     let isChecked = e.target.checked;    
-     if(isChecked == true) {
-      setChecked([...checked, e.target.id])
-     }else {
-      setChecked((z) => z.filter((x) => x !=e.target.id));
-     }
-     
+    if(isChecked == true) {
+    setChecked([...checked, e.target.id])
+    }else {
+    setChecked((z) => z.filter((x) => x !=e.target.id));
+    }
   }
   useEffect(()=>{
     fetchData()

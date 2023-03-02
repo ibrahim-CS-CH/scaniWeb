@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import { numberValidation } from './validator';
 import Book from './Book';
 import Dvd from './Dvd';
 import Furniture from './Furniture';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 const CreateProduct = () => {
+
   const navigate = useNavigate();
   useEffect(()=>{
     document.title="Product Add"
@@ -17,10 +19,9 @@ const CreateProduct = () => {
       e.preventDefault();
       setOpt(e.target.value);
   }
-  const handleSave = (e) =>{
-    e.preventDefault();
+  const sendReq = ()=>{
     axios.post('https://scaniwebtask.000webhostapp.com/index.php', x).then((res)=>{
-      if(res.data.status ){
+      if(res.data.status == 1 ){
         console.log(res.data);
         navigate('/');
       }else {
@@ -33,6 +34,41 @@ const CreateProduct = () => {
         console.log(res.data.message);
       }
     });
+  }
+  const handleSave = (e) =>{
+    e.preventDefault();
+    console.log(inputs);
+    switch(opt) {
+      case 'DVD':
+        if(numberValidation(inputs.size) == false) {
+          alert('please Enter a valid number in size');
+        }else {
+          sendReq();
+        }
+        break;
+        case "Furniture":
+          if (numberValidation(inputs.height) ==false) {
+            alert('please enter an integar number in height');
+          }
+          else if (numberValidation(inputs.width) ==false) {
+            alert('please enter an integar number in width');
+          }
+          else if (numberValidation(inputs.length) ==false) {
+            alert('please enter an integar number in length');
+          }else {
+            sendReq();
+          }
+          break;
+          case 'Book':
+          if(numberValidation(inputs.weight) == false) {
+            alert('please Enter a valid number in weight');
+          }else {
+            sendReq();
+          }
+        break;
+
+    }
+  
     
   }
   const handleChange = (e)=>{
