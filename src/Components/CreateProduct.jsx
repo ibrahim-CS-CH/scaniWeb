@@ -37,7 +37,7 @@ const CreateProduct = () => {
   }
   const handleSave = (e) =>{
     e.preventDefault();
-    if(!/^[a-zA-Z\s]*$/g.test(inputs.name)){
+    if(!/^[a-zA-Z0-9_ ]*$/g.test(inputs.name)){
       alert("please Enter a valid name like 'shoses and clothes'")
     }else {
       if(numberValidation(inputs.price) == false) {
@@ -96,18 +96,18 @@ const CreateProduct = () => {
         </div>
         <div className='productForm' id='productForm'>
           <label htmlFor="sku">
-            <span className='sku'>sku</span>
-            <input type="text" name="sku" id="sku" onChange={handleChange} placeholder='Please, provide sku' required />
+            <span >sku</span>
+            <input type="text" name="sku" id="sku" onChange={handleChange} placeholder='#sku' required />
           </label>
           <label htmlFor="name">
             <span>name</span>
-            <input type="text" name="name" id="name" onChange={handleChange} placeholder='Please, provide name' required />
+            <input type="text" name="name" id="name" onChange={handleChange} placeholder='#name' required />
           </label>
           <label htmlFor="price">
             price ($)
-            <input type="text"name="price" id='price' min={1} onChange={handleChange} placeholder="Please, provide price" required />
+            <input type="text"name="price" id='price' min={1} onChange={handleChange} placeholder="#price" required />
           </label>
-          <label htmlFor="productType" id='productType'>
+          <label htmlFor="productType" id=''>
             productType
             <select name="type" id="productType" required value={opt} onChange={handleType}>
               <option>choose type</option>
